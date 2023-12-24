@@ -5,7 +5,7 @@
 // @description  Adds a snowfall effect and Christmas lights to the webpage with snowflake emoji and allows setting a GIF as the background. Includes a button to remove the snowfall effect.
 // @author       CocoaBean6646 (Christmas Lights and Snowfall) / Your Name (GIF Background)
 // @match        https://mpp.8448.space/*
-// @grant        none
+// @grant        GM_addStyle
 // ==/UserScript==
 
 (function() {
@@ -168,3 +168,45 @@
         }
     }
 })();
+
+const styles = `
+        /* Style for the ugly buttons */
+        .ugly-button {
+            background-color: transparent;
+            color: #fff;
+            padding: 5px 8px; /* Adjust padding to make buttons smaller */
+            margin: 3px; /* Adjust margin for spacing */
+            cursor: pointer;
+            border: 2px solid #fff; /* White border */
+            border-radius: 5px;
+            font-size: 12px; /* Adjust font size to make text smaller */
+        }
+
+        /* Style for the sound button */
+        .sound-btn {
+            background-color: transparent;
+        }
+
+        /* Style for the client settings button */
+        .client-settings-btn {
+            background-color: transparent;
+        }
+
+        /* Style for the clearchat button */
+        .clearchat-btn {
+            background-color: transparent;
+        }
+
+        /* Style for the getcrown button */
+        .getcrown-btn {
+            background-color: transparent;
+        }
+
+        /* Style for the vanish button */
+        .vanish-btn {
+            background-color: transparent;
+        }
+    `;
+
+    // Inject the styles into the page
+    GM_addStyle(styles);
